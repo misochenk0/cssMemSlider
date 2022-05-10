@@ -1,0 +1,150 @@
+.slider-wrapper [name="slide"] {
+	position: absolute;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.slider-wrapper {
+	display: grid;
+	width: 90vw;
+	margin: 0 auto;
+	grid-template-columns: repeat(2, 1fr);
+}
+.slide {
+	background: darkblue;
+}
+.slide img {
+	max-width: 100%;
+	height: 80vh;
+	object-fit: contain;
+	margin: 0 auto;
+	display: block;
+
+}
+
+.slider-slides {
+	grid-column: 1/3;
+}
+
+
+.slide, .slider-text__item {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-20px);
+	top: 0;
+	font-size: 2em;
+	transition: .5s all;
+	margin-top: 1rem;
+	position: absolute;
+}
+
+
+#first:checked ~ .slider-slides .slide-1 {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+	position: relative;
+}
+
+#first:checked ~ .slider-text .slide-1 {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+	position: relative;
+}
+
+#first:checked ~ .slider-buttons [for="first"] span{
+	background: blue;
+	width: 15px;
+	height: 15px;
+}
+
+#second:checked ~ .slider-slides .slide-2 {
+	display: block;
+	opacity: 1;
+	position: relative;
+	visibility: visible;
+	transform: none;
+}
+
+#second:checked ~ .slider-text .slide-2 {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	position: relative;
+	transform: none;
+}
+
+#second:checked ~ .slider-buttons [for="second"] span{
+	background: blue;
+	width: 15px;
+	height: 15px;
+}
+
+#third:checked ~ .slider-slides .slide-3 {
+	display: block;
+	opacity: 1;
+	position: relative;
+	visibility: visible;
+	transform: none;
+}
+
+#third:checked ~ .slider-text .slide-3 {
+	display: block;
+	opacity: 1;
+	position: relative;
+	visibility: visible;
+	transform: none;
+}
+
+#third:checked ~ .slider-buttons [for="third"] span{
+	background: blue;
+	width: 15px;
+	height: 15px;
+}
+
+#fourth:checked ~ .slider-slides .slide-4 {
+	display: block;
+	opacity: 1;
+	position: relative;
+	visibility: visible;
+	transform: none;
+}
+
+#fourth:checked ~ .slider-text .slide-4 {
+	display: block;
+	opacity: 1;
+	position: relative;
+	visibility: visible;
+	transform: none;
+}
+
+#fourth:checked ~ .slider-buttons [for="fourth"] span{
+	background: blue;
+	width: 15px;
+	height: 15px;
+}
+
+
+.slider-buttons {
+	display: flex;
+	justify-content: flex-end;
+	column-gap: 10px;
+	align-items: center;
+}
+
+.slider-buttons label {
+	padding: 15px;
+	cursor: pointer;
+}
+
+.slider-buttons label span {
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: black;
+	border-radius: 50%;
+}
