@@ -165,3 +165,23 @@
 	background: black;
 	border-radius: 50%;
 }
+
+@media(max-width: 577px) {
+	.slider-wrapper {
+		grid-template-columns: 100%;
+		row-gap: .5rem;
+	}
+	.slide img {
+		height: 60vh;
+	}
+	.slider-slides {
+		grid-column: 1/2;
+	}
+	.slider-text {
+		order: 3;
+	}
+	.slider-buttons {
+		justify-content: center;
+	}
+
+}
