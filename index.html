@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Mem-slider</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="slider-wrapper">
+		<input type="radio" name="slide" id="first" checked>
+		<input type="radio" name="slide" id="second">
+		<input type="radio" name="slide" id="third">
+		<input type="radio" name="slide" id="fourth">
+		<div class="slider-slides">
+			<div class="slide slide-1"> 
+				<img src="./imgs/mem1.jpg" alt="mem1">
+			</div>
+			<div class="slide slide-2"> 
+				<img src="./imgs/mem2.jpg" alt="mem2">
+			</div>
+			<div class="slide slide-3"> 
+				<img src="./imgs/mem3.jpg" alt="mem3">
+			</div>
+			<div class="slide slide-4"> 
+				<img src="./imgs/mem4.jpg" alt="mem4">
+			</div>
+		</div>
+		<div class="slider-text">
+			<div class="slider-text__item slide-1">Mem 1</div>
+			<div class="slider-text__item slide-2">Mem 2</div>
+			<div class="slider-text__item slide-3">Mem 3</div>
+			<div class="slider-text__item slide-4">Mem 4</div>
+		</div>
+		<div class="slider-buttons">
+			<button>
+				<label for="first"><span></span></label>
+			</button>
+			<button>
+				<label for="second"><span></span></label>
+			</button>
+			<button>
+				<label for="third"><span></span></label>
+			</button>
+			<button>
+				<label for="fourth"><span></span></label>
+			</button>
+		</div>
+
+	</div>
+</body>
+</html>
