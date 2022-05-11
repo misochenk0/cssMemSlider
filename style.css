@@ -9,6 +9,7 @@
 	display: grid;
 	width: 90vw;
 	margin: 0 auto;
+	row-gap: 2rem;
 	grid-template-columns: repeat(2, 1fr);
 }
 .slide {
@@ -31,14 +32,14 @@
 .slide, .slider-text__item {
 	opacity: 0;
 	visibility: hidden;
-	transform: translateX(-20px);
 	top: 0;
 	font-size: 2em;
 	transition: .5s all;
-	margin-top: 1rem;
 	position: absolute;
 }
-
+.slider-text__item {
+	transform: translateX(-10%);
+}
 
 #first:checked ~ .slider-slides .slide-1 {
 	display: block;
@@ -58,8 +59,8 @@
 
 #first:checked ~ .slider-buttons [for="first"] span{
 	background: blue;
-	width: 15px;
-	height: 15px;
+	width: 1em;
+	height: 1em;
 }
 
 #second:checked ~ .slider-slides .slide-2 {
@@ -80,8 +81,7 @@
 
 #second:checked ~ .slider-buttons [for="second"] span{
 	background: blue;
-	width: 15px;
-	height: 15px;
+	transform: scale(1.5);
 }
 
 #third:checked ~ .slider-slides .slide-3 {
@@ -102,8 +102,7 @@
 
 #third:checked ~ .slider-buttons [for="third"] span{
 	background: blue;
-	width: 15px;
-	height: 15px;
+	transform: scale(1.5);
 }
 
 #fourth:checked ~ .slider-slides .slide-4 {
@@ -124,26 +123,44 @@
 
 #fourth:checked ~ .slider-buttons [for="fourth"] span{
 	background: blue;
-	width: 15px;
-	height: 15px;
+	transform: scale(1.5);
 }
 
 
 .slider-buttons {
 	display: flex;
 	justify-content: flex-end;
-	column-gap: 10px;
+	column-gap: .5rem;
 	align-items: center;
 }
 
 .slider-buttons label {
-	padding: 15px;
+	padding: 1em;
+	transition: .5s all;
 	cursor: pointer;
 }
 
+.slider-buttons label  span {
+	transition: .5s all;
+}
+
+.slider-buttons label:hover span{
+	transform: scale(1.2);
+}
+.slider-buttons label {
+	display: block;
+}
+.slider-buttons button {
+	background: none;
+	border: none;
+}
+.slider-buttons button:focus label span{
+	background: gray
+}
+
 .slider-buttons label span {
-	width: 10px;
-	height: 10px;
+	width: .7em;
+	height: .7em;
 	display: block;
 	background: black;
 	border-radius: 50%;
